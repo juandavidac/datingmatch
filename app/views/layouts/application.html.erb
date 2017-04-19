@@ -11,7 +11,7 @@
 
   <body>
     <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-      <ul class"nav navmenu-nav" id="navmenu"> 
+      <ul class"nav navmenu-nav" id="navmenu">
         <li class="active">
           <a href="#">
             <i class="fa fa-users"></i> Discover
@@ -43,5 +43,11 @@
     </a>
 
     <%= yield %>
+
+    <script type="text/javascript">
+      $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </body>
 </html>
