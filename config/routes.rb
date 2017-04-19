@@ -6,4 +6,7 @@ Rails.application.routes.draw do
       get 'matches'
     end
   end
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  match 'sign_out', to: 'sessions#destroy', via: :delete
 end
