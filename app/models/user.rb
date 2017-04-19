@@ -15,5 +15,5 @@ class User < ApplicationRecord
         location: auth['info']['location'],
         bio: auth['extra']['raw_info']['bio']
       )
-end
+  end
 end
