@@ -44,8 +44,11 @@
         <%= image_tag "logo_white.png", alt: "Tinstuk Logo", class: "logo-brand" %>
       </a>
     <%end%>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
 
-    <%= yield %>
 
     <script type="text/javascript">
       $(function () {
