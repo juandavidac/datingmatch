@@ -44,7 +44,7 @@
         <%= image_tag "logo_white.png", alt: "Tinstuk Logo", class: "logo-brand" %>
       </a>
     <%end%>
-    
+
     <div class="container">
       <%= yield %>
     </div>
@@ -54,6 +54,8 @@
       $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     });
+
+    $("#tinderslide > ul li").tsort({attr:"id"});
 
     $("#tinderslide").jTinder({
         onDislike: function (item) {
