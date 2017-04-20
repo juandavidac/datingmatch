@@ -55,6 +55,11 @@
       $('[data-toggle="tooltip"]').tooltip()
     });
 
+    $('.actions .like, .actions .dislike').click(function(e){
+      e.preventDefault();
+      $("#tinderslide").jTinder($(this).attr('class'));
+    });
+
     $("#tinderslide > ul li").tsort({attr:"id"});
 
     $("#tinderslide").jTinder({
