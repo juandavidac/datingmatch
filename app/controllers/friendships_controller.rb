@@ -6,7 +6,7 @@ class FriendshipsController < ApplicationController
     @inverse_friendship = current_user.inverse_friendships.where(user_id: @friend.id)
     unless @inverse_friendship.blank?
       @friend.accept_match(current_user)
-      @friend.save
+      # @friend.save
       @match=true
     else
       @friendship = current_user.request_match(@friend)

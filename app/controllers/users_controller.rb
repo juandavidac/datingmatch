@@ -20,5 +20,9 @@ class UsersController < ApplicationController
   end
 
   def matches
+    @matches = current_user.friendships.where(state: 'Active')
+    .map(&:friend) +
+    current_user.inverse_friendships.where(state: 'Active')
+    .map(&:user)
   end
 end
