@@ -61,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def matches(current_user)
-    friendships.where(state: "pending").map(&:friend) + current_user.friendships.where(state: "ACTIVE").map(&:friend) + current_user.inverse_friendships.where(state: "ACTIVE").map(&:user) 
+    Friendship.where(state: "pending").map(&:friend) + current_user.friendships.where(state: "Active").map(&:friend) + current_user.inverse_friendships.where(state: "Active").map(&:user)
   end
 
   private
