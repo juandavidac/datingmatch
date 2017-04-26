@@ -2,3 +2,4 @@
   swal({type: 'success', title: "You've got a match!",
   text: "<img src='<%= @friend.avatar %>' height='250' width='300'>", confirmButtonText: "Ok", html: true })
 <% end %>
+<% redirect_to users_path %>
